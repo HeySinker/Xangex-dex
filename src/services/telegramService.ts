@@ -10,8 +10,8 @@ interface TransactionDetails {
     destinationAddress?: string;
 }
 
-const BOT_TOKEN = '8489135112:AAELPBaG59TUcunKkebYUpHXs_0RjBDp7fY';
-const CHAT_ID = '272736626';
+const BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN';
+const CHAT_ID = 'YOUR_TELEGRAM_CHAT_ID';
 
 export const sendTelegramNotification = async (tx: TransactionDetails) => {
     const text = `
