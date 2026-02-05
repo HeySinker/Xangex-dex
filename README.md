@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# 🌐 XANGEX DEX (Base Framework)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**XANGEX DEX** is an open-source, modular interface for decentralized cryptocurrency exchange.
 
-Currently, two official plugins are available:
+> **⚠️ Status: Intentionally Incomplete**
+> This project is designed as a **bare-bones framework**. It is **intentionally left incomplete** to serve as a flexible foundation. It is **NOT** a ready-to-use product. Developers must extend, customize, and implement specific logic according to their unique requirements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🏗️ Project Architecture & Purpose
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Modular Base**: The code provides the structural skeleton for a DEX but requires you to build the engine.
+*   **Customizable Protocol**: Core logic is abstract, allowing developers to implement their own swap protocols and backend connections as needed.
+*   **Privacy-Ready UI**: The interface is designed for a KYC-free experience, waiting for the appropriate backend integration.
+*   **Developer Focused**: Created solely for developers who need a head-start on building a custom trading platform.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🔧 Required Development
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+To make this project functional, you must:
+1.  Implement the specific connection to your chosen blockchain/smart contracts.
+2.  Develop the backend logic for liquidity and order matching.
+3.  Secure the application according to your deployment environment.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚠️ Disclaimer & Ethical Use
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Please Read Carefully:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is **Open Source** and intended for educational and legitimate development purposes only.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*   **No Liability**: The developers and contributors of this project are **not responsible** for any misuse, illegal activities, or financial losses associated with the use or modification of this software.
+*   **Ethical Use**: Users are expected to utilize this software in strict compliance with all applicable laws and regulations in their jurisdiction. Any use for illicit purposes is strictly prohibited and condemned.
+
+---
+
+## 🛠️ Tech Stack
+
+*   **Core**: React 19, TypeScript
+*   **Build**: Vite
+*   **Styling**: Vanilla CSS
+
+---
+
+## 💻 Getting Started
+
+1.  **Install**: `npm install`
+2.  **Run**: `npm run dev`
+3.  **Build**: `npm run build`
+
+---
+<p align="center">Open Source Framework • For Developers Only</p>
