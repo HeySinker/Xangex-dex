@@ -1,0 +1,468 @@
+.deposit-page {
+    min-height: calc(100vh - 70px);
+    padding: var(--spacing-xl) 0;
+}
+
+.deposit-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* Header */
+.deposit-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.deposit-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-dark-50);
+    margin-bottom: var(--spacing-sm);
+}
+
+.title-icon {
+    font-size: 2.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.deposit-subtitle {
+    font-size: 1rem;
+    color: var(--color-dark-400);
+}
+
+/* Form */
+.deposit-form {
+    margin-bottom: var(--spacing-xl);
+}
+
+.amount-input-wrapper {
+    position: relative;
+}
+
+.amount-input {
+    padding-left: 80px;
+}
+
+.amount-suffix {
+    position: absolute;
+    left: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary-400);
+}
+
+.input-hint {
+    font-size: 0.75rem;
+    color: var(--color-dark-500);
+    margin-top: var(--spacing-xs);
+}
+
+/* Info Cards */
+.deposit-info-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius-lg);
+}
+
+.info-icon {
+    font-size: 1.5rem;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-title {
+    font-size: 0.75rem;
+    color: var(--color-dark-400);
+}
+
+.info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-dark-100);
+}
+
+/* Generate Button */
+.generate-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.generate-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.generate-btn:hover::before {
+    left: 100%;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Deposit Address */
+.deposit-address {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Timer */
+.deposit-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.deposit-timer.warning {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.deposit-timer.warning .timer-value {
+    color: var(--color-error-light);
+}
+
+.timer-icon {
+    font-size: 1.25rem;
+}
+
+.timer-label {
+    font-size: 0.875rem;
+    color: var(--color-dark-300);
+}
+
+.timer-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--color-info-light);
+}
+
+/* Crypto Badge */
+.deposit-crypto-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.deposit-crypto-badge .crypto-icon {
+    font-size: 2rem;
+}
+
+.deposit-crypto-badge .crypto-label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark-100);
+}
+
+/* QR Code */
+.qr-code-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.qr-code-placeholder {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+.qr-icon {
+    font-size: 3rem;
+}
+
+.qr-text {
+    font-size: 0.875rem;
+    color: var(--color-dark-600);
+    font-weight: 500;
+}
+
+/* Address Box */
+.address-container {
+    margin-bottom: var(--spacing-lg);
+}
+
+.address-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-dark-300);
+    margin-bottom: var(--spacing-sm);
+}
+
+.address-box {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+}
+
+.address-text {
+    flex: 1;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-dark-200);
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+.copy-btn {
+    flex-shrink: 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-primary-400);
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.copy-btn:hover {
+    background: rgba(99, 102, 241, 0.25);
+}
+
+.copy-btn.copied {
+    color: var(--color-success);
+    background: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+/* Warning */
+.deposit-warning {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.warning-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.warning-content {
+    font-size: 0.875rem;
+    color: var(--color-dark-300);
+}
+
+.warning-content strong {
+    display: block;
+    color: var(--color-warning-light);
+    margin-bottom: var(--spacing-xs);
+}
+
+.warning-content ul {
+    margin: 0;
+    padding-right: var(--spacing-md);
+}
+
+.warning-content li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Transaction Status */
+.transaction-status {
+    padding: var(--spacing-md);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.status-icon {
+    font-size: 1.25rem;
+}
+
+.status-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-dark-200);
+}
+
+.status-progress {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.75rem;
+    color: var(--color-dark-400);
+    text-align: center;
+}
+
+/* Actions */
+.deposit-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.deposit-actions .btn {
+    flex: 1;
+}
+
+/* Instructions */
+.deposit-instructions {
+    margin-bottom: var(--spacing-xl);
+}
+
+.deposit-instructions .card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-dark-100);
+}
+
+.instructions-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.step {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.step-number {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-dark-100);
+    margin-bottom: 4px;
+}
+
+.step-content p {
+    font-size: 0.75rem;
+    color: var(--color-dark-400);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .deposit-title {
+        font-size: 1.5rem;
+    }
+
+    .title-icon {
+        font-size: 2rem;
+    }
+
+    .deposit-info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .instructions-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .deposit-actions {
+        flex-direction: column;
+    }
+
+    .address-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copy-btn {
+        width: 100%;
+    }
+}
